@@ -18,7 +18,10 @@
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/sliders.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/jquery-ui.css" > 
+  <link rel="stylesheet" href="css/jquery-ui.css" > <!-- FAQ -->
+  <link rel="stylesheet" href="css/simplelightbox.min.css"  type="text/css"> <!-- GALLERY -->
+  <link rel="stylesheet" href="css/gallery.css"  type="text/css">
+
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico">
@@ -266,8 +269,29 @@
             <h2 class="heading green">Gallery</h2>
             <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet</p>
           </div>
+          <div class="container">
+            <div class="gallery">
+              <a href="img/images/image1.jpg" class="big"><img src="img/images/thumbs/thumb1.jpg" alt="" title="Beautiful Image" /></a>
+              <a href="img/images/image2.jpg"><img src="img/images/thumbs/thumb2.jpg" alt="" title=""/></a>
+              <a href="img/images/image3.jpg"><img src="img/images/thumbs/thumb3.jpg" alt="" title="Beautiful Image"/></a>
+              <a href="img/images/image4.jpg"><img src="img/images/thumbs/thumb4.jpg" alt="" title=""/></a>
+              <div class="clear"></div>
+
+              <a href="img/images/image5.jpg"><img src="img/images/thumbs/thumb5.jpg" alt="" title=""/></a>
+              <a href="img/images/image6.jpg"><img src="img/images/thumbs/thumb6.jpg" alt="" title=""/></a>
+              <a href="img/images/image7.jpg" class="big"><img src="img/images/thumbs/thumb7.jpg" alt="" title=""/></a>
+              <a href="img/images/image8.jpg"><img src="img/images/thumbs/thumb8.jpg" alt="" title=""/></a>
+              <div class="clear"></div>
+
+              <a href="img/images/image9.jpg" class="big"><img src="img/images/thumbs/thumb9.jpg" alt="" title=""/></a>
+              <a href="img/images/image10.jpg"><img src="img/images/thumbs/thumb10.jpg" alt="" title=""/></a>
+              <a href="img/images/image11.jpg"><img src="img/images/thumbs/thumb11.jpg" alt="" title=""/></a>
+              <a href="img/images/image12.jpg"><img src="img/images/thumbs/thumb12.jpg" alt="" title=""/></a>
+              <div class="clear"></div>
+            </div>
+    	</div>
           <div class="row">
-              <p>content goes here</p>
+              <a href="gallery.html" class="btn">See More</a>
           </div>
         </div>  
       </section> <!-- end gallery section -->
@@ -441,6 +465,7 @@
   <script type="text/javascript" src="js/plugins.js"></script>  
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/simple-lightbox.js"></script>  <!-- GALLERY -->
 
   <!-- Google Map -->
   <script type="text/javascript">
@@ -524,6 +549,54 @@ $(document).ready(function(){
     $( "#accordion" ).accordion();
   } );
   </script>
+
+<!--GALLERY -->
+  <script>
+	$(function(){
+		var $gallery = $('.gallery a').simpleLightbox();
+
+		$gallery.on('show.simplelightbox', function(){
+			console.log('Requested for showing');
+		})
+		.on('shown.simplelightbox', function(){
+			console.log('Shown');
+		})
+		.on('close.simplelightbox', function(){
+			console.log('Requested for closing');
+		})
+		.on('closed.simplelightbox', function(){
+			console.log('Closed');
+		})
+		.on('change.simplelightbox', function(){
+			console.log('Requested for change');
+		})
+		.on('next.simplelightbox', function(){
+			console.log('Requested for next');
+		})
+		.on('prev.simplelightbox', function(){
+			console.log('Requested for prev');
+		})
+		.on('nextImageLoaded.simplelightbox', function(){
+			console.log('Next image loaded');
+		})
+		.on('prevImageLoaded.simplelightbox', function(){
+			console.log('Prev image loaded');
+		})
+		.on('changed.simplelightbox', function(){
+			console.log('Image changed');
+		})
+		.on('nextDone.simplelightbox', function(){
+			console.log('Image changed to next');
+		})
+		.on('prevDone.simplelightbox', function(){
+			console.log('Image changed to prev');
+		})
+		.on('error.simplelightbox', function(e){
+			console.log('No image found, go to the next/prev');
+			console.log(e);
+		});
+	});
+</script>
 <!--    
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-3JgmhkUjlqzyLuvu3YBwg0FInOcMd98&callback"
   type="text/javascript"></script>-->
