@@ -1348,6 +1348,11 @@ label {
   margin: auto;
   margin-bottom: 50px;
 }
+.hero-overlay{
+  background-color: rgba(0, 0, 0, 0.60) !important;
+  z-index: 5; 
+  display: block;
+}
 .hero {
   background-size: cover;
   background-position: 50%;
@@ -1380,7 +1385,7 @@ label {
         padding: 0 15px; } }
   .hero__inner {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;}
   .hero__inner--bottom {
     vertical-align: bottom; }
   .hero__inner--top {
@@ -2705,7 +2710,7 @@ th {
   padding: 0 100px; }
   @media only screen and (max-width: 767px) {
     .testimonial {
-      padding: 0 20px; } }
+      padding: 0 50px; } }
   .testimonial__body {
     padding-left: 500px;
     margin-top: 0px; }
@@ -3689,7 +3694,7 @@ body.nav--overlay-open {
 .footer__logo {
   margin-bottom: 52px; }
   .footer__logo img {
-    max-height: 21px; }
+    max-height: 100px; }
 
 /* Get in Touch
 -------------------------------------------------------*/

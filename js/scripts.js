@@ -291,7 +291,7 @@
         singleItem: true,
         navigationText: ["<i class='pe-7s-angle-left'></i>", "<i class='pe-7s-angle-right'></i>"]
       })
-
+      
     })(jQuery);
   };
 
