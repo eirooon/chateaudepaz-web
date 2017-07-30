@@ -36,7 +36,8 @@ a {
 .container .gallery a img {
   float: left;
   width: 20%;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
   border: 2px solid #fff;
   -webkit-transition: -webkit-transform .15s ease;
   -moz-transition: -moz-transform .15s ease;
