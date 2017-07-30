@@ -203,10 +203,10 @@ a.ui-button:focus {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid #2fc97f;
-	background: #2fc97f;
+	border: 1px solid #c5c5c5;
+	background: #ffffff;
 	font-weight: normal;
-	color: #ffffff;
+	color: #2b2b2b;
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
