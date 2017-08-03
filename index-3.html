@@ -19,7 +19,10 @@
   <link rel="stylesheet" href="css/sliders.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/fullscreen-slideshow.css" />
-	
+  <link rel="stylesheet" href="css/jquery-ui.css" > <!-- FAQ -->
+  <link rel="stylesheet" href="css/simplelightbox.min.css"  type="text/css"> <!-- GALLERY -->
+  <link rel="stylesheet" href="css/gallery.css"  type="text/css">
+
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -276,9 +279,30 @@
             <h2 class="heading green">Gallery</h2>
             <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="row">
-              <p>content goes here</p>
-          </div>
+          <div class="container">
+            <div class="gallery">
+              <a href="img/images/gallery02.jpg"><img src="img/images/thumbs/gallery02.jpg" alt="" title="Beautiful Image" /></a>
+              <a href="img/images/gallery03.jpg" class="big"><img src="img/images/thumbs/gallery03.jpg" alt="" title=""/></a>
+              <a href="img/images/gallery04.jpg"><img src="img/images/thumbs/gallery04.jpg" alt="" title="Beautiful Image"/></a>
+              <a href="img/images/gallery05.jpg"><img src="img/images/thumbs/gallery05.jpg" alt="" title=""/></a>
+              <div class="clear"></div>
+
+              <a href="img/images/gallery06.jpg" class="big"><img src="img/images/thumbs/gallery06.jpg" alt="" title=""/></a>
+              <a href="img/images/gallery04.jpg"><img src="img/images/thumbs/gallery04.jpg" alt="" title=""/></a>
+              <a href="img/images/gallery02.jpg"><img src="img/images/thumbs/gallery02.jpg" alt="" title=""/></a>
+              <a href="img/images/gallery04"><img src="img/images/thumbs/gallery04.jpg" alt="" title=""/></a>
+              <div class="clear"></div>
+
+             <a href="img/images/gallery02.jpg"><img src="img/images/thumbs/gallery02.jpg" alt="" title="Beautiful Image" /></a>
+              <a href="img/images/gallery03.jpg" class="big"><img src="img/images/thumbs/gallery03.jpg" alt="" title=""/></a>
+              <a href="img/images/gallery04.jpg"><img src="img/images/thumbs/gallery04.jpg" alt="" title="Beautiful Image"/></a>
+              <a href="img/images/gallery05.jpg"><img src="img/images/thumbs/gallery05.jpg" alt="" title=""/></a>
+              <div class="clear"></div>
+            </div>
+    	    </div>
+          <!--<div class="row">
+              <a href="gallery.html" class="btn">See More</a>
+          </div>-->
         </div>  
       </section> <!-- end gallery section -->
       <hr>
@@ -301,14 +325,63 @@
       <!-- FAQ Section -->
       <section  id="FAQ" class="section-wrap promo-section">
         <div class="container">
-          
+
           <div class="heading-row text-center">
             <h2 class="heading green">FAQ</h2>
             <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="row">
-              <p>content goes here</p>
+          <div id="accordion">
+            <h3>1. Question will be displayed here</h3>
+            <div>
+              <p>
+              Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+              ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+              amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+              odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+              </p>
+            </div>
+             <h3>2. Question will be displayed here</h3>
+            <div>
+              <p>
+              Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+              purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+              velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+              suscipit faucibus urna.
+              </p>
+            </div>
+            <h3>3. Question will be displayed here</h3>
+            <div>
+              <p>
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+              Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+              ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+              lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+              </p>
+              <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+              </ul>
+            </div>
+             <h3>4. Question will be displayed here</h3>
+            <div>
+              <p>
+              Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+              et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+              mauris vel est.
+              </p>
+              <p>
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+              </p>
+            </div>
           </div>
+ 
+ 
+</body>
+</html>
         </div>  
       </section> <!-- end buyer's guide' section -->
       
@@ -399,6 +472,8 @@
   <script type="text/javascript" src="js/gmap3.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>  
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/simple-lightbox.js"></script>  <!-- GALLERY -->
 
   <!-- Google Map -->
   <script type="text/javascript">
@@ -468,15 +543,54 @@
         });
       }  // End if
     });
+    
+    $( "#accordion" ).accordion();
+    var $gallery = $('.gallery a').simpleLightbox();
 
+		$gallery.on('show.simplelightbox', function(){
+			console.log('Requested for showing');
+		})
+		.on('shown.simplelightbox', function(){
+			console.log('Shown');
+		})
+		.on('close.simplelightbox', function(){
+			console.log('Requested for closing');
+		})
+		.on('closed.simplelightbox', function(){
+			console.log('Closed');
+		})
+		.on('change.simplelightbox', function(){
+			console.log('Requested for change');
+		})
+		.on('next.simplelightbox', function(){
+			console.log('Requested for next');
+		})
+		.on('prev.simplelightbox', function(){
+			console.log('Requested for prev');
+		})
+		.on('nextImageLoaded.simplelightbox', function(){
+			console.log('Next image loaded');
+		})
+		.on('prevImageLoaded.simplelightbox', function(){
+			console.log('Prev image loaded');
+		})
+		.on('changed.simplelightbox', function(){
+			console.log('Image changed');
+		})
+		.on('nextDone.simplelightbox', function(){
+			console.log('Image changed to next');
+		})
+		.on('prevDone.simplelightbox', function(){
+			console.log('Image changed to prev');
+		})
+		.on('error.simplelightbox', function(e){
+			console.log('No image found, go to the next/prev');
+			console.log(e);
+		});
     });
   </script>
-  
-    
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-3JgmhkUjlqzyLuvu3YBwg0FInOcMd98&callback"
-  type="text/javascript"></script>
 
-
+<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-3JgmhkUjlqzyLuvu3YBwg0FInOcMd98&callback" type="text/javascript"></script>-->
 
 </body>
 </html>
