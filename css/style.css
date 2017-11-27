@@ -1349,10 +1349,14 @@ label {
   margin-bottom: 50px;
 }
 .hero-overlay{
-  /*background-image: url("https://www.transparenttextures.com/patterns/black-lozenge.png");*/
-  background-color: rgba(0, 0, 0, 0.50) !important;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.70), 
+    rgba(0, 0, 0, 0.45)
+  ),
+  url(../img/hero-slider/1.jpeg);
   z-index: 5; 
   display: block;
+  background-size: cover;
 }
 .hero {
   background-size: cover;
@@ -2740,6 +2744,7 @@ th {
     display: block;
     width: 30em;
     height: auto;
+    border-radius: 6px;
     }
     @media only screen and (max-width: 991px) {
       .testimonial__img {
@@ -4885,5 +4890,5 @@ img.alignright {
 /*# sourceMappingURL=style.css.map */
 
 .bg-houses{
-  background-color:#32373f;
+  background-color:#1d1d1d;
 }
